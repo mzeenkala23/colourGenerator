@@ -2,9 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-export const Button = ({ handleClick, text, colour }) => {
+export const Button = ({ handleClick, text, colour, label }) => {
   return (
-    <ButtonElement colour={colour} onClick={handleClick}>
+    <ButtonElement aria-label={label} colour={colour} onClick={handleClick}>
       {text}
     </ButtonElement>
   );
@@ -24,6 +24,7 @@ const ButtonElement = styled.button`
 
 Button.propTypes = {
   text: PropTypes.string.isRequired,
+  label: PropTypes.string,
   colour: PropTypes.string.isRequired,
   handleClick: PropTypes.func,
 };

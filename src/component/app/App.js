@@ -102,11 +102,13 @@ function App() {
           <Button
             handleClick={() => randomColourGeneratorHandler()}
             text="Generate Palette"
+            label="Generate a new colour palette"
             colour="white"
           />
           {width < 900 ? (
             <Button
               text="Copy Palette"
+              label="Copy colour palette to clipbard"
               colour="white"
               handleClick={() => handleOnClickCopyColours(colours)}
             />
